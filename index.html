@@ -4,49 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Elemento Fixo no Topo</title>
+  <!-- Link para o arquivo CSS externo -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <div class="fixed-element">
+  <div id="fixed-element">
     Elemento Fixo no Topo
   </div>
 
   <div class="content">
-    <h1>Bem-vindo ao exemplo de elemento fixo no topo</h1>
-    <p>Role para ver o comportamento do elemento fixo.</p>
-    <p>O elemento fixo ficará visível no topo da tela enquanto você rola a página.</p>
-    <p>Continue rolando...</p>
-    <p>Continue rolando...</p>
-    <p>Continue rolando...</p>
-    <p>Continue rolando...</p>
-    <p>Continue rolando...</p>
-    <p>Continue rolando...</p>
-    <p>Continue rolando...</p>
-    <p>Continue rolando...</p>
-    <p>Continue rolando...</p>
-    <p>Continue rolando...</p>
-    <p>Continue rolando...</p>
-    <p>Continue rolando...</p>
-    <p>Continue rolando...</p>
-    <p>Continue rolando...</p>
-    <p>Continue rolando...</p>
-    <p>Continue rolando...</p>
-    <p>Continue rolando...</p>
-    <p>Continue rolando...</p>
-    <p>Continue rolando...</p>
-    <p>Continue rolando...</p>
-    <p>Continue rolando...</p>
-    <p>Continue rolando...</p>
-    <p>Continue rolando...</p>
-    <p>Continue rolando...</p>
-    <p>Continue rolando...</p>
-    <p>Continue rolando...</p>
-    <p>Continue rolando...</p>
-    <p>Continue rolando...</p>
-    <p>Continue rolando...</p>
-    <p>Continue rolando...</p>
+    <h1>Conteúdo da Página</h1>
+    <p>Role para baixo e o elemento fixo permanecerá no topo.</p>
+    <p>Se o CSS puro não funcionou, agora o JavaScript está forçando o comportamento.</p>
+    <p>Conteúdo adicional...</p>
+    <p>Conteúdo adicional...</p>
+    <p>Conteúdo adicional...</p>
   </div>
+
+  <!-- JavaScript diretamente no HTML -->
+  <script>
+    // Código JavaScript para forçar a posição fixa
+    const fixedElement = document.getElementById("fixed-element");
+
+    window.addEventListener("scroll", () => {
+      fixedElement.style.position = "fixed";
+      fixedElement.style.top = "0";
+    });
+  </script>
 
 </body>
 </html>
