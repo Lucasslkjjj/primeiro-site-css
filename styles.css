@@ -1,43 +1,23 @@
-/* Garantir que o body tenha margin e padding 0 */
+/* Reset básico */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-/* Ajustes para garantir que o conteúdo abaixo do elemento fixo comece depois dele */
-.content {
-  padding: 20px;
-  margin-top: 60px; /* Certifique-se de que o conteúdo não fique atrás do elemento fixo */
-}
-
-/* Estilo para o elemento fixo no topo */
-.fixed-element {
-  position: fixed;  /* Fixa o elemento na tela */
-  top: 0;            /* Fixa o elemento no topo da tela */
-  left: 0;           /* Fixa o elemento à esquerda */
-  width: 100%;       /* Largura do elemento ocupa toda a tela */
+#fixed-element {
+  position: absolute; /* Inicialmente absolute */
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: #4CAF50;
   color: white;
   padding: 10px;
   text-align: center;
-  font-size: 18px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
 
-/* Estilo para o título */
-h1 {
-  color: #333;
-}
-
-/* Ajustes para dispositivos móveis - garante o comportamento no celular */
-@media (max-width: 600px) {
-  .fixed-element {
-    font-size: 16px;  /* Ajuste o tamanho da fonte para telas menores */
-    padding: 8px;
-  }
-
-  .content {
-    margin-top: 70px;  /* Garantir que o conteúdo não fique atrás do elemento fixo em telas menores */
-  }
+.content {
+  padding: 20px;
+  margin-top: 50px; /* Espaço para não ficar atrás do elemento fixo */
+  height: 2000px; /* Conteúdo longo para testar rolagem */
 }
