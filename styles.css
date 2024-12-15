@@ -1,70 +1,43 @@
-#vermelho {
-  color: red;
+/* Garantir que o body tenha margin e padding 0 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
-#hexadecimal {
-  color: #290183;
-}
-#rgb {
-  color: rgb(100, 76, 911);
-}
-#background {
-  color: #000000;
-  background-color: yellow;
-  padding: 30px;
-}
-#georgia {
-  font-family: Georgia;
-}
-#helvetica {
-  font-family: helvetica;
-}
-#courier-new {
-  font-family: 'Courier New';
-}
-.tamanho {
-  font-size: 100px;
-}
-.menor {
-  font-size: 30px;
-}
-.negrito {
-  font-weight: 800;
-}
-.italico {
-  font-style: italic;
-}
-.alturaelargura {
-  width: 1px;
-  height: 1px;
-}
-.borda {
-  border: 1px solid red;
-}
-.meio {
-  text-align: center;
-}
-.direita {
-  text-align: right;
-}
-.site {
-  color: white;
-  background-color: green;
-  padding: 3px;
-  border: 5px solid green;
-  text-align: center;
-  width: 50px;
-  text-decoration: none;
-  display: block;
-}
-.fixo {
-  position: fixed;
-  left: 0;
-  top: 0;
-  text-align: center;
-  color: #fff;
-  border-bottom: 60px solid #000;
-  width: 100%;
-  background-color: #000;
+
+/* Ajustes para garantir que o conteúdo abaixo do elemento fixo comece depois dele */
+.content {
   padding: 20px;
-  z-index: 9999; /* Garante que o elemento ficará sobre outros elementos */
+  margin-top: 60px; /* Certifique-se de que o conteúdo não fique atrás do elemento fixo */
+}
+
+/* Estilo para o elemento fixo no topo */
+.fixed-element {
+  position: fixed;  /* Fixa o elemento na tela */
+  top: 0;            /* Fixa o elemento no topo da tela */
+  left: 0;           /* Fixa o elemento à esquerda */
+  width: 100%;       /* Largura do elemento ocupa toda a tela */
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para o título */
+h1 {
+  color: #333;
+}
+
+/* Ajustes para dispositivos móveis - garante o comportamento no celular */
+@media (max-width: 600px) {
+  .fixed-element {
+    font-size: 16px;  /* Ajuste o tamanho da fonte para telas menores */
+    padding: 8px;
+  }
+
+  .content {
+    margin-top: 70px;  /* Garantir que o conteúdo não fique atrás do elemento fixo em telas menores */
+  }
 }
